@@ -1,6 +1,6 @@
 {
-  "name": "vibeguard",
-  "version": "1.0.0",
+  "name": "@flamki/vibeguard",
+  "version": "1.0.1",
   "description": "A CLI safety net for AI-generated code",
   "main": "dist/cli.js",
   "type": "commonjs",
@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "dev": "npm run build && node dist/cli.js"
+    "dev": "npm run build && node dist/cli.js scan ."
   },
   "keywords": [
     "ai",
