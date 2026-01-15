@@ -1,5 +1,3 @@
-console.log("FILE WALKER RUNNING");
-
 import fs from "fs";
 import path from "path";
 
@@ -14,37 +12,23 @@ const IGNORED_DIRS = new Set([
   "out",
 ]);
 
-/**
- * Recursively finds all .ts and .js files in a directory and its subdirectories.
- */
 export async function walkFiles(rootPath: string): Promise<string[]> {
   const results: string[] = [];
-
-  // Always work with absolute paths
   const absoluteRoot = path.resolve(rootPath);
 
-  function walk(currentDir: string) {
-    if (!fs.existsSync(currentDir)) return;
+  function walk(dir: string) {
+    if (!fs.existsSync(dir)) return;
 
-    let entries: fs.Dirent[];
-    try {
-      entries = fs.readdirSync(currentDir, { withFileTypes: true });
-    } catch {
-      return;
-    }
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
 
     for (const entry of entries) {
-      const fullPath = path.join(currentDir, entry.name);
+      const fullPath = path.join(dir, entry.name);
 
       if (entry.isDirectory()) {
         if (!IGNORED_DIRS.has(entry.name)) {
-          // 🔁 recursion — this is what scans subfolders
-          walk(fullPath);
+          walk(fullPath); // 🔥 recursion
         }
-        continue;
-      }
-
-      if (entry.isFile()) {
+      } else if (entry.isFile()) {
         const ext = path.extname(entry.name).toLowerCase();
         if (ALLOWED_EXTENSIONS.includes(ext)) {
           results.push(fullPath);
@@ -54,7 +38,5 @@ export async function walkFiles(rootPath: string): Promise<string[]> {
   }
 
   walk(absoluteRoot);
-
-  console.log("FILES FOUND:", results.length);
   return results;
 }
