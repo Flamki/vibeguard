@@ -1,6 +1,6 @@
 {
   "name": "@flamki/vibeguard",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A CLI safety net for AI-generated code",
   "main": "dist/cli.js",
   "type": "commonjs",
