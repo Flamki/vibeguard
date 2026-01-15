@@ -1,0 +1,27 @@
+{
+  "name": "vibeguard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "commonjs",
+  "bin": {
+    "vibeguard": "dist/cli.js"
+  },
+"scripts": {
+  "build": "tsc",
+  "dev": "npm run build && node dist/cli.js"
+  },
+
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^11.0.0",
+    "glob": "^10.3.10"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0"
+  }
+}
