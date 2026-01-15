@@ -1,20 +1,26 @@
 {
   "name": "vibeguard",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A CLI safety net for AI-generated code",
+  "main": "dist/cli.js",
   "type": "commonjs",
   "bin": {
     "vibeguard": "dist/cli.js"
   },
-"scripts": {
-  "build": "tsc",
-  "dev": "npm run build && node dist/cli.js"
+  "scripts": {
+    "build": "tsc",
+    "dev": "npm run build && node dist/cli.js"
   },
-
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "ai",
+    "cli",
+    "static-analysis",
+    "security",
+    "developer-tools",
+    "code-quality"
+  ],
+  "author": "Ayush Singh",
+  "license": "MIT",
   "dependencies": {
     "chalk": "^5.3.0",
     "commander": "^11.0.0",
