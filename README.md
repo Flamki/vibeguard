@@ -12,7 +12,7 @@
   <p>
     <img src="https://img.shields.io/npm/v/@flamki/vibeguard?color=brightgreen&label=npm" />
     <img src="https://img.shields.io/npm/l/@flamki/vibeguard?label=license" />
-    <img src="https://img.shields.io/node/v/@flamki/vibeguard?label=node" />
+    <img src="https://img.shields.io/npm/node/v/@flamki/vibeguard?label=node" />
     <img src="https://github.com/flamki/vibeguard/actions/workflows/publish.yml/badge.svg" />
   </p>
 
@@ -23,7 +23,7 @@
 <h2>🤔 Why VibeGuard?</h2>
 
 <p>
-AI helps you write code faster — but it often:
+AI helps you write code faster — but it also:
 </p>
 
 <ul>
@@ -35,23 +35,6 @@ AI helps you write code faster — but it often:
 <p>
 <strong>VibeGuard acts as a last-line safety check</strong> before your code
 reaches production.
-</p>
-
-<hr/>
-
-<h2>🎥 Demo (10 seconds)</h2>
-
-<p align="center">
-  <img 
-    src="https://user-images.githubusercontent.com/placeholder/vibeguard-demo.gif"
-    alt="VibeGuard CLI demo"
-    width="820"
-    style="border-radius:12px; border:1px solid #e5e7eb;"
-  />
-</p>
-
-<p align="center">
-  <em>Instant feedback. No setup. No cloud.</em>
 </p>
 
 <hr/>
@@ -89,6 +72,31 @@ reaches production.
 
 <pre><code>npm install -g @flamki/vibeguard
 vibeguard scan .</code></pre>
+
+<hr/>
+
+<h2>🧪 Live Demo (Run it yourself)</h2>
+
+<p>
+VibeGuard is a CLI-first tool. The fastest way to understand it
+is to <strong>run it directly on your codebase</strong>.
+</p>
+
+<pre><code>npx @flamki/vibeguard@latest scan .</code></pre>
+
+<p>
+Within seconds, VibeGuard scans your project and reports:
+</p>
+
+<ul>
+  <li>⚠️ insecure token storage</li>
+  <li>⚠️ missing async error handling</li>
+  <li>⚠️ hallucinated (non-existent) APIs</li>
+</ul>
+
+<p>
+No setup. No config. No cloud. No internet required.
+</p>
 
 <hr/>
 
@@ -180,7 +188,7 @@ Just <strong>fast, practical heuristics</strong>.
 
 <p>
 VibeGuard is designed to act as a <strong>safety firewall for AI agents</strong>
-via the <strong>Model Context Protocol (MCP)</strong>.
+using the <strong>Model Context Protocol (MCP)</strong>.
 </p>
 
 <ul>
@@ -198,10 +206,6 @@ via the <strong>Model Context Protocol (MCP)</strong>.
 
 <h2>🛠️ Tech Stack</h2>
 
-<p>
-Built with a minimal, reliable stack:
-</p>
-
 <ul>
   <li>
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" width="18"/>
@@ -210,10 +214,6 @@ Built with a minimal, reliable stack:
   <li>
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" width="18"/>
     <strong>TypeScript</strong>
-  </li>
-  <li>
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="18"/>
-    <strong>Commander</strong> (CLI)
   </li>
   <li>
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/npm/npm-original-wordmark.svg" width="18"/>
